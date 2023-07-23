@@ -8,10 +8,14 @@ import morgan from 'morgan';
 
 // Endpoints
 import kpiRoutes from './routes/kpi.js';
+import productRoutes from './routes/products.js';
+import transactionRoutes from './routes/transactions.js';
 
 // DB Info
+import { kpis, products, transactions } from './data/data.js';
 import KPI from './models/KPI.js';
-import { kpis } from './data/data.js';
+import Product from './models/Product.js';
+import Transaction from './models/Transaction.js';
 
 // EXPRESS CONFIGS
 dotenv.config();
@@ -26,6 +30,8 @@ app.use(cors());
 
 // DEFINE ROUTES
 app.use('/kpi', kpiRoutes);
+app.use('/product', productRoutes);
+app.use('/transaction', transactionRoutes);
 
 // MONGOOSE SETUP
 const PORT = process.env.PORT || 9000;
@@ -38,8 +44,10 @@ mongoose
 		app.listen(PORT, () =>
 			console.log(`Listening on Server Port: ${PORT}`)
 		);
-		// Add date as needed - adds new data and drops db for dev purposes
+		// Add as needed - adds new data and drops db for dev purposes
 		// await mongoose.connection.db.dropDatabase();
 		// KPI.insertMany(kpis);
+		// Product.insertMany(products);
+		// Transaction.insertMany(transactions);
 	})
 	.catch((error) => console.log(`${error}: did not connect.`));

@@ -20,14 +20,14 @@ import {
 } from 'recharts';
 import FlexBetween from '@/components/FlexBetween';
 
-const pieData = [
-	{ name: 'Group A', value: 600 },
-	{ name: 'Group B', value: 400 },
-];
-
 const Row2 = () => {
 	const { palette } = useTheme();
 	const pieColor = [palette.primary[800], palette.primary[300]];
+	const pieData = [
+		{ name: 'Group A', value: 600 },
+		{ name: 'Group B', value: 400 },
+	];
+
 	const { data: productData } = useGetProductsQuery();
 	const { data: operationalData } = useGetKpisQuery();
 

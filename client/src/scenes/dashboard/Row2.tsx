@@ -114,7 +114,8 @@ const Row2 = () => {
                             paddingAngle={5}
                             dataKey="value"
                         >
-                            {pieData.map((entry, index) => (
+                            {/* eslint-disable-next-line */}
+                            {pieData.map((_entry, index) => (
                                 <Cell key={`cell-${index}`} fill={pieColor[index]} />
                             ))}
                         </Pie>

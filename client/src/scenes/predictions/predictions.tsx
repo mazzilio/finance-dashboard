@@ -8,7 +8,7 @@ import regression, { DataPoint } from "regression";
 
 const Predictions = () => {
     const { palette } = useTheme();
-    const [isPredictions, setIsPredictions] = useState<Boolean>(false);
+    const [isPredictions, setIsPredictions] = useState<boolean>(false);
     const { data: kpiData } = useGetKpisQuery();
 
     const formattedData = useMemo(() => {

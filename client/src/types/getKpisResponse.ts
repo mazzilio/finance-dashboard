@@ -1,35 +1,35 @@
 export interface ExpensesByCategory {
-	salaries: number;
-	supplies: number;
-	services: number;
+    salaries: number;
+    supplies: number;
+    services: number;
 }
 
 export interface Month {
-	id: string;
-	month: string;
-	expenses: number;
-	nonOperationalExpenses: number;
-	operationalExpenses: number;
-	revenue: number;
+    id: string;
+    month: string;
+    expenses: number;
+    nonOperationalExpenses: number;
+    operationalExpenses: number;
+    revenue: number;
 }
 
 export interface Day {
-	id: string;
-	month: string;
-	expenses: number;
-	revenue: number;
+    id: string;
+    month: string;
+    expenses: number;
+    revenue: number;
 }
 
 export interface GetKpisResponse {
-	id: string;
-	_id: string;
-	__v: number;
-	totalProfit: number;
-	totalRevenue: number;
-	totalExpenses: number;
-	expensesByCategory: ExpensesByCategory;
-	monthlyData: Array<Month>;
-	dailyData: Array<Day>;
-	createdAt: string;
-	updatedAt: string;
+    id: string;
+    _id: string;
+    __v: number;
+    totalProfit: number;
+    totalRevenue: number;
+    totalExpenses: number;
+    expensesByCategory: ExpensesByCategory;
+    monthlyData: Array<Month>;
+    dailyData: Array<Day>;
+    createdAt: string;
+    updatedAt: string;
 }

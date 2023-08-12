@@ -4,9 +4,7 @@ import { Box, Typography, useTheme } from '@mui/material';
 import TollIcon from '@mui/icons-material/Toll';
 import FlexBetween from '@/components/FlexBetween';
 
-type Props = {};
-
-const Navbar = (props: Props) => {
+const Navbar = () => {
 	const { palette } = useTheme();
 	const [selectedPage, setSelectedPage] = useState('dashboard');
 	return (
@@ -21,7 +19,6 @@ const Navbar = (props: Props) => {
 
 			{/* RIGHT */}
 			<FlexBetween gap='2rem'>
-				{/* Hover selection for links */}
 				<Box sx={{ '&:hover:': { color: palette.primary[100] } }}>
 					<Link
 						to='/'

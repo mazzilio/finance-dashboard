@@ -20,11 +20,9 @@ function App() {
 			<div className='app'>
 				<BrowserRouter>
 					<ThemeProvider theme={theme}>
-						{/* Removes default browser stylings */}
 						<CssBaseline />
 						<Box className='app__box'>
 							<Navbar />
-
 							<Routes>
 								<Route path='/' element={<Dashboard />} />
 								<Route

@@ -1,4 +1,3 @@
-// MUI Themes
 // You'll need to expand the token values past MUI Themes - check expanded-theme.ts
 export const tokens = {
 	grey: {

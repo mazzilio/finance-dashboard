@@ -20,10 +20,9 @@
 
         /* Linting */
         "strict": true,
-        "noUnusedLocals": true,
-        "noUnusedParameters": false,
+        "noUnusedLocals": false,
+        "noUnusedParameters": true,
         "noFallthroughCasesInSwitch": true,
-        // Help use .env variables
         "types": ["vite/client"]
     },
     "include": ["src"],

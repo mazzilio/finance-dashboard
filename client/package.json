@@ -6,8 +6,8 @@
     "scripts": {
         "dev": "vite",
         "build": "tsc && vite build",
-        "lint": "eslint src --ext ts,tsx",
         "preview": "vite preview",
+        "lint": "eslint src --ext ts,tsx",
         "format": "prettier --ignore-path .gitignore --write \"**/*.+(ts|tsx|js|jsx|json)\""
     },
     "dependencies": {
